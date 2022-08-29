@@ -2,8 +2,8 @@ const express = require('express');
 const { PermissionMiddlewareCreator } = require('forest-express-sequelize');
 const { company } = require('../models');
 const { faker } = require('@faker-js/faker');
-const { Company } = require('@faker-js/faker/company');
-const { DESCRIBE } = require('sequelize/types/lib/query-types');
+// const { Company } = require('@faker-js/faker/company');
+// const { DESCRIBE } = require('sequelize/types/lib/query-types');
 
 faker.locale = 'fr';
 const router = express.Router();
@@ -84,7 +84,9 @@ router.post('/actions/add-fake-company', permissionMiddlewareCreator.smartAction
           });
         });
     }  
-
 });
+
+
+
 
 module.exports = router;

@@ -10,7 +10,17 @@ collection('company', {
     {
       name: 'Add fake company',
       type: 'global',
-    }
+    },
+    { 
+      name: 'Mark as Live',
+      type: 'bulk',
+    },
+   {name:'Niveau tarifaire',
+    field: 'Niveau tarifaire',
+    type: 'bulk',
+    enums:['primaire','collège','lycée','supérieur','boost'],
+  },
+
   ],
   fields: [],
   segments: [],
