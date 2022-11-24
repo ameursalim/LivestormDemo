@@ -68,7 +68,7 @@ router.post('/actions/add-fake-company', permissionMiddlewareCreator.smartAction
   const Company= faker.company.companyName();
    const adress=faker.address.city();
    const startAt = new Date(faker.date.recent());
-   
+  
  
       company
         .create({
@@ -86,6 +86,28 @@ router.post('/actions/add-fake-company', permissionMiddlewareCreator.smartAction
     }  
 });
 
+
+router.post('/actions/add-fake-company',  permissionMiddlewareCreator.smartAction(), (req, res) => {
+  for ( let i = 0; i< 10< 10; i++) {
+    const company= faker.company.companyName();
+    const adress= faker.adress.companyAdress();
+    const startAt= new Date(faker.daterecent()); 
+
+
+    company.create({
+      companyName:Company,
+      companyAdress:adress,
+      createdAt:startAt,
+
+    })
+    .then(() => {
+      res.send({
+        success:"well done the company have been created "
+      })
+    })
+  }
+
+}) 
 
 
 

@@ -129,19 +129,6 @@
         "load": false,
         "change": []
       }
-    }, {
-      "name": "Niveau tarifaire",
-      "type": "bulk",
-      "baseUrl": null,
-      "endpoint": "/forest/actions/niveau-tarifaire",
-      "httpMethod": "POST",
-      "redirect": null,
-      "download": false,
-      "fields": [],
-      "hooks": {
-        "load": false,
-        "change": []
-      }
     }]
   }, {
     "name": "device",
